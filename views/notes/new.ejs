@@ -1,0 +1,15 @@
+<%- include('../partials/head') %>
+<h2>새 메모</h2>
+<% if (typeof error !== 'undefined') { %>
+<p class="error"><%= error %></p>
+<% } %>
+<form action="/notes" method="post">
+<label>제목
+<input name="title" required />
+</label>
+<label>내용
+<textarea name="body" required></textarea>
+</label>
+<button type="submit">저장</button>
+</form>
+<%- include('../partials/foot') %>

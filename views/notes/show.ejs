@@ -1,0 +1,8 @@
+<%- include('../partials/head') %>
+<article>
+<h2><%= note.title %></h2>
+<p><%= note.body %></p>
+<p><small><%= note.createdAt.toLocaleString('ko-KR') %></small></p>
+<a href="/notes">← 목록</a>
+</article>
+<%- include('../partials/foot') %>

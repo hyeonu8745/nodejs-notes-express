@@ -1,0 +1,16 @@
+<%- include('../partials/head') %>
+<h2>메모 목록</h2>
+<ul>
+<% if (notes.length === 0) { %>
+<li>메모가 없습니다.</li>
+<% } %>
+<% notes.forEach(n => { %>
+<li>
+<a href="/notes/<%= n.id %>"><%= n.title %></a>
+<form action="/notes/<%= n.id %>/delete" method="post" style="display:inline">
+<button type="submit">삭제</button>
+</form>
+</li>
+<% }) %>
+</ul>
+<%- include('../partials/foot') %>
